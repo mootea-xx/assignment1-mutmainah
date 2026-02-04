@@ -1,0 +1,285 @@
+/*
+  Name: Mutmainah Tokunbo
+  Course: Comp 2707
+  Assignment: Part B - Resume
+  Date: February 3, 2026
+
+  File: resume.css
+  Purpose:
+  - Style resume.html to resemble a PDF resume template
+  - Use ONLY original CSS (no frameworks)
+  - Lots of comments included for grading
+*/
+
+/* ----------------------------- */
+/* 1) Reset & base styles         */
+/* ----------------------------- */
+
+* {
+  box-sizing: border-box; /* keeps widths predictable */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background: #f3f4f6; /* light gray like a PDF viewer background */
+  color: #111827;
+  line-height: 1.4;
+}
+
+/* Center the resume on the page */
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+/* ----------------------------- */
+/* 2) Resume "sheet" layout       */
+/* ----------------------------- */
+
+.sheet {
+  width: 980px;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  display: grid;
+  grid-template-columns: 320px 1fr; /* sidebar + content */
+}
+
+/* ----------------------------- */
+/* 3) Sidebar styling             */
+/* ----------------------------- */
+
+.sidebar {
+  background: #0f172a; /* dark navy */
+  color: #e5e7eb;      /* light text */
+  padding: 22px;
+}
+
+/* Photo container */
+.photo-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Sidebar blocks separated by a subtle line */
+.side-block {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Sidebar headings */
+.side-title {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Labels in contact section */
+.side-label {
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+/* Slightly muted helper text */
+.muted {
+  color: rgba(229, 231, 235, 0.75);
+}
+
+/* Sidebar links: readable + professional */
+.side-link {
+  color: #e5e7eb;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(229, 231, 235, 0.45);
+}
+
+.side-link:hover {
+  border-bottom-color: rgba(229, 231, 235, 0.9);
+}
+
+/* Skills tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* Sidebar lists */
+.side-list {
+  margin-left: 18px;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+}
+
+/* ----------------------------- */
+/* 4) Main content styling        */
+/* ----------------------------- */
+
+.content {
+  padding: 28px 32px;
+}
+
+/* Top header (name + role + summary) */
+.header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.name {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  line-height: 1.05;
+}
+
+.role {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.summary {
+  margin-top: 12px;
+  font-size: 14px;
+  max-width: 65ch;
+}
+
+/* Section headings */
+.section {
+  margin-top: 18px;
+}
+
+.section-title {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* Entry blocks */
+.entry {
+  padding: 12px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.section .entry:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Entry header row */
+.entry-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.entry-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.entry-sub {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.entry-date {
+  font-size: 12px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+/* Bullets */
+.bullets {
+  margin-top: 10px;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.bullets li {
+  font-size: 13px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ----------------------------- */
+/* 5) Responsive layout           */
+/* ----------------------------- */
+
+@media (max-width: 940px) {
+  .sheet {
+    width: 100%;
+    grid-template-columns: 1fr; /* stack */
+  }
+
+  .content {
+    padding: 22px 18px;
+  }
+
+  .entry-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ----------------------------- */
+/* 6) Print styles (PDF printing) */
+/* ----------------------------- */
+
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  .page {
+    padding: 0;
+  }
+
+  .sheet {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* keeps sidebar color when printing */
+  .sidebar {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

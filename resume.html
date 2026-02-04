@@ -1,0 +1,239 @@
+<!--
+  Name: Mutmainah Tokunbo
+  Course: Comp 2707
+  Assignment: Part B - Resume
+  Date: February 3, 2026
+
+  File: resume.html
+  Purpose:
+  - Resume webpage using ONLY original HTML + CSS (no frameworks)
+  - Styled to resemble a professional PDF resume layout
+  - Commented thoroughly for grading
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Mutmainah Tokunbo | Resume</title>
+
+  <!-- Link to the ONE required CSS file -->
+  <link rel="stylesheet" href="resume.css" />
+
+  <!-- Optional typography (not a framework) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Main wrapper keeps the resume centered on screen -->
+  <main class="page">
+
+    <!-- "Sheet" simulates a PDF page -->
+    <section class="sheet">
+
+      <!-- SIDEBAR (left): photo + contact + skills -->
+      <aside class="sidebar">
+
+        <!-- Profile photo: place your photo at images/profile.jpg -->
+        <div class="photo-box">
+          <img src="images/profile.jpg" alt="Profile photo of Mutmainah Tokunbo" class="photo">
+        </div>
+
+        <!-- Contact block -->
+        <section class="side-block">
+          <h2 class="side-title">Contact</h2>
+
+          <!-- NOTE: I made the email and website real + clickable -->
+          <div class="contact">
+            <p><span class="side-label">Phone:</span> (519) 555-0136</p>
+
+            <p>
+              <span class="side-label">Email:</span>
+              <a class="side-link" href="mailto:tokunbom@uwindsor.ca">tokunbom@uwindsor.ca</a>
+            </p>
+
+            <p><span class="side-label">Location:</span> Windsor, ON <span class="muted">(N9B 3P4)</span></p>
+
+            <!-- LinkedIn: replace this with your real one if you have it -->
+            <p>
+              <span class="side-label">LinkedIn:</span>
+              <span class="muted">Add your profile link</span>
+            </p>
+
+            <p>
+              <span class="side-label">Website:</span>
+              <a class="side-link" href="https://myweb.cs.uwindsor.ca/~tokunbom" target="_blank" rel="noopener">
+                myweb.cs.uwindsor.ca/~tokunbom
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <!-- Skills block (kept as tags for modern PDF feel) -->
+        <section class="side-block">
+          <h2 class="side-title">Skills</h2>
+
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Python</span>
+            <span class="tag">Communication</span>
+            <span class="tag">Organization</span>
+            <span class="tag">Teamwork</span>
+          </div>
+        </section>
+
+        <!-- Strengths block (less generic than certifications) -->
+        <section class="side-block">
+          <h2 class="side-title">Strengths</h2>
+          <ul class="side-list">
+            <li>Reliable under pressure</li>
+            <li>Clear communication</li>
+            <li>Fast learner</li>
+            <li>Detail-oriented</li>
+          </ul>
+        </section>
+
+        <!-- Interests block -->
+        <section class="side-block">
+          <h2 class="side-title">Interests</h2>
+          <ul class="side-list">
+            <li>Business & analytics</li>
+            <li>Productivity systems</li>
+            <li>Design & presentation</li>
+          </ul>
+        </section>
+
+      </aside>
+
+      <!-- MAIN CONTENT (right): name + summary + sections -->
+      <article class="content">
+
+        <!-- Top header -->
+        <header class="header">
+          <h1 class="name">Mutmainah Tokunbo</h1>
+
+          <!-- A more specific (less generic) role line -->
+          <p class="role">Business Student • Operations & Customer Service • Tech-Enabled Systems</p>
+
+          <!-- Summary written to sound more intentional -->
+          <p class="summary">
+            Business student with hands-on experience in customer service and operational support.
+            Known for calm execution, strong communication, and attention to detail. Interested in using
+            technology (HTML/CSS, Excel, and basic Python) to build cleaner workflows and more organized systems.
+          </p>
+        </header>
+
+        <!-- EXPERIENCE -->
+        <section class="section">
+          <h2 class="section-title">Experience</h2>
+
+          <!-- Entry 1 (Removed "Example") -->
+          <div class="entry">
+            <div class="entry-top">
+              <div>
+                <h3 class="entry-title">Customer Service Associate</h3>
+                <p class="entry-sub">Retail Operations • Front-of-House Support</p>
+              </div>
+              <p class="entry-date">2024 – 2025</p>
+            </div>
+
+            <ul class="bullets">
+              <li>Assisted customers efficiently while keeping service professional and friendly.</li>
+              <li>Processed transactions accurately and handled cash with strong attention to detail.</li>
+              <li>Restocked, organized, and maintained a clean store environment to improve presentation.</li>
+              <li>Worked effectively during peak hours, prioritizing speed and accuracy.</li>
+            </ul>
+          </div>
+
+          <!-- Entry 2 (More specific wording) -->
+          <div class="entry">
+            <div class="entry-top">
+              <div>
+                <h3 class="entry-title">Administrative Support Assistant</h3>
+                <p class="entry-sub">Scheduling • Email Communication • Document Organization</p>
+              </div>
+              <p class="entry-date">2023 – 2024</p>
+            </div>
+
+            <ul class="bullets">
+              <li>Organized documents and helped maintain accurate records for ongoing tasks.</li>
+              <li>Supported scheduling and communication to keep work moving smoothly.</li>
+              <li>Improved clarity by keeping files structured and easy to find.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section">
+          <h2 class="section-title">Education</h2>
+
+          <div class="entry">
+            <div class="entry-top">
+              <div>
+                <h3 class="entry-title">Bachelor of Commerce (BCom)</h3>
+                <p class="entry-sub">University of Windsor</p>
+              </div>
+              <p class="entry-date">Expected 2026</p>
+            </div>
+
+            <ul class="bullets">
+              <li>Relevant focus: business operations, analytics, and professional communication.</li>
+              <li>Built comfort with structured writing, presentations, and organized reporting.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section">
+          <h2 class="section-title">Projects</h2>
+
+          <div class="entry">
+            <div class="entry-top">
+              <div>
+                <h3 class="entry-title">Resume Website (HTML + CSS)</h3>
+                <p class="entry-sub">Original layout • Print-friendly styling • Clean typography</p>
+              </div>
+              <p class="entry-date">2026</p>
+            </div>
+
+            <ul class="bullets">
+              <li>Designed a two-column resume layout to resemble a PDF template.</li>
+              <li>Used consistent spacing, headings, and reusable CSS classes for a polished look.</li>
+              <li>Added print styles so the page can export cleanly as a PDF.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="entry-top">
+              <div>
+                <h3 class="entry-title">Excel Organization Template</h3>
+                <p class="entry-sub">Tracking • Formatting • Simple reporting</p>
+              </div>
+              <p class="entry-date">2025</p>
+            </div>
+
+            <ul class="bullets">
+              <li>Created a structured template to track tasks, deadlines, and outcomes clearly.</li>
+              <li>Used formatting and grouping to keep information readable and consistent.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <p>References available upon request.</p>
+        </footer>
+
+      </article>
+    </section>
+  </main>
+</body>
+</html>

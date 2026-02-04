@@ -1,0 +1,125 @@
+/*
+  Name: Mutmainah Tokunbo
+  Course: Comp 2707
+  Assignment: Part A - Selectors
+  Date: February 3, 2026
+
+  File: selectors.css
+  Purpose:
+  - Demonstrate element selector
+  - Demonstrate class selector
+  - Demonstrate ID selector
+  - Demonstrate pseudo-selectors (2 different ones)
+*/
+
+/* ----------------------------- */
+/* Basic page styling (not graded)*/
+/* ----------------------------- */
+
+/* Reset default spacing for consistent look */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page background + base font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f4f7;
+  color: #111;
+  line-height: 1.4;
+}
+
+/* Container to keep the content centered */
+.container {
+  width: 900px;
+  max-width: 92%;
+  margin: 30px auto;
+}
+
+/* Simple card style for sections */
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 16px;
+}
+
+/* Headings */
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ----------------------------------- */
+/* 1) ELEMENT SELECTOR (2 pts)          */
+/* ----------------------------------- */
+/* Element selector targets ALL <p> elements */
+p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #222;
+}
+
+/* ----------------------------------- */
+/* 2) CLASS SELECTOR (2 pts)            */
+/* ----------------------------------- */
+/* Class selector targets any element with class="highlight" */
+.highlight {
+  background: #fff3bf;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* Another class selector example: button style */
+.btn {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ----------------------------------- */
+/* 3) ID SELECTOR (2 pts)               */
+/* ----------------------------------- */
+/* ID selector targets the ONE element with id="unique-note" */
+#unique-note {
+  border-left: 5px solid #10b981;
+  padding-left: 12px;
+  background: #ecfdf5;
+}
+
+/* ----------------------------------- */
+/* 4) PSEUDO-SELECTORS (4 pts total)    */
+/*    Demonstrate 2 different ones      */
+/* ----------------------------------- */
+
+/* Pseudo-selector #1: :hover
+   This runs when the user hovers over the link */
+.link-demo:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Pseudo-selector #2: :first-child
+   Targets the first <li> in the list only */
+.demo-list li:first-child {
+  font-weight: bold;
+  color: #b45309;
+}
+
+/* Extra styling for the list itself (not required, but neat) */
+.demo-list {
+  margin-top: 12px;
+  padding-left: 18px;
+}

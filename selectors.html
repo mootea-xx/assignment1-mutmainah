@@ -1,0 +1,95 @@
+<!--
+  Name: Mutmainah Tokunbo
+  Course: COMP 2707
+  Assignment: Part A - Selectors
+  Date: February 3, 2026
+
+  File: selectors.html
+  Purpose:
+  - Demonstrate element selector
+  - Demonstrate class selector
+  - Demonstrate ID selector
+  - Demonstrate pseudo-selectors (2 different ones)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title appears in browser tab -->
+  <title>Selectors Demo | Mutmainah Tokunbo</title>
+
+  <!-- Link to the CSS file required by the assignment -->
+  <link rel="stylesheet" href="selectors.css" />
+</head>
+
+<body>
+  <!-- Page container (helps keep content centered) -->
+  <main class="container">
+
+    <!-- Page heading -->
+    <h1>CSS Selectors Demonstration</h1>
+
+    <!-- ELEMENT SELECTOR EXAMPLE:
+         In selectors.css we will style ALL <p> elements using an element selector (p { ... }) -->
+    <section class="card">
+      <h2>1) Element Selector</h2>
+      <p>
+        This paragraph is styled using an <strong>element selector</strong> (the CSS targets all <code>&lt;p&gt;</code> tags).
+      </p>
+      <p>
+        This is another paragraph, also styled because it is a <code>&lt;p&gt;</code> element.
+      </p>
+    </section>
+
+    <!-- CLASS SELECTOR EXAMPLE:
+         In selectors.css we will style .highlight using a class selector (.highlight { ... }) -->
+    <section class="card">
+      <h2>2) Class Selector</h2>
+      <p>
+        Classes can be reused on many elements. Here is a
+        <span class="highlight">highlighted piece of text</span>
+        using a <strong>class selector</strong>.
+      </p>
+
+      <button class="btn">
+        This button uses a class selector (.btn)
+      </button>
+    </section>
+
+    <!-- ID SELECTOR EXAMPLE:
+         In selectors.css we will style #unique-note using an ID selector (#unique-note { ... }) -->
+    <section class="card">
+      <h2>3) ID Selector</h2>
+      <p id="unique-note">
+        This paragraph is styled using an <strong>ID selector</strong>. IDs should be unique on a page.
+      </p>
+    </section>
+
+    <!-- PSEUDO-SELECTOR EXAMPLES (2 different ones):
+         We will demonstrate:
+         - :hover (when the user hovers)
+         - :first-child (targets the first item in a list)
+    -->
+    <section class="card">
+      <h2>4) Pseudo-selectors (2 Examples)</h2>
+
+      <!-- :hover example -->
+      <a class="link-demo" href="#">
+        Hover over this link (:hover pseudo-selector)
+      </a>
+
+      <!-- :first-child example -->
+      <ul class="demo-list">
+        <li>This first list item is styled using :first-child</li>
+        <li>This item is normal</li>
+        <li>This item is normal</li>
+      </ul>
+    </section>
+
+  </main>
+</body>
+</html>
